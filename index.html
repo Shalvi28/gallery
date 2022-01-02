@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://www.apkmirror.com/wp-content/uploads/2018/04/5ac8d47834191.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Gallery</title>
+    <style>
+        body{
+            margin: 0;
+            font-family:sans-serif;
+           
+        }
+        #first, #second{
+            display:flex;
+            justify-content: space-evenly;
+            gap:1rem;
+
+        }
+     
+        img{
+            width:19.5rem;
+            height:20rem;
+        }
+        button{
+            background: none;
+            border: none;
+        }
+   h2:hover{
+       background-color:rgb(214, 206, 206);
+   }
+      
+
+    </style>
+</head>
+<body>
+   
+    <h1 style="text-indent: 4rem;">GALLERY</h1>
+    <div id="icons"style="margin-left:1200px; margin-top:-50px; ">
+    <span class="material-icons">
+        notifications_paused
+        </span>
+        &nbsp;&nbsp;&nbsp;
+        <span class="material-icons">
+            search
+            </span>
+            &nbsp;&nbsp;&nbsp;
+            <span class="material-icons">
+                settings
+                </span>
+</div>
+    <div id="navbar"style = "display:flex; gap:1rem; justify-content: space-evenly; ">
+   <h2 style="color:red">PICTURES</h2>
+    <h2>ALBUMS</h2>
+    <h2>STORIES</h2>
+    <h2>SHARED</h2>
+</div>
+<hr>
+    
+    <div id="main">
+        <h3 style="margin-left:10px">Today</h3>
+    <div id="first">
+        
+        <button onclick="display('i1')"><img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i1"/></button>
+        <button onclick="display('i2')"><img src="https://images.pexels.com/photos/257699/pexels-photo-257699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i2"/></button>
+        <button onclick="display('i3')"><img src="https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" id="i3"/></button>
+        <button onclick="display('i4')"><img src="https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i4"/></button>
+    </div>
+    <h3 style="margin-left:10px">Yesterday</h3>
+    <div id="second">
+        
+        <button onclick="display('i5')"><img src="https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i5"/></button>
+        <button onclick="display('i6')"><img src="https://images.pexels.com/photos/673648/pexels-photo-673648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i6"/></button>
+        <button onclick="display('i7')"><img src="https://images.pexels.com/photos/1964471/pexels-photo-1964471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i7"/></button>
+        <button onclick="display('i8')"><img src="https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="i8"/></button>
+    </div>
+</div>
+<button id="displayimage" onclick="reload()"></button>
+    <script>
+        
+        function display(value){
+            var img_display = document.getElementById("main");
+            img_display.style.display = "none";
+            var displayimage = document.getElementById("displayimage");
+            document.querySelector("h1").style.display="none";
+            document.getElementById("icons").style.display="none";
+            document.getElementById("navbar").style.display="none";
+            document.querySelector("hr").style.display="none";
+            switch(value){
+                case 'i1':
+                var img1 = document.getElementById("i1");
+                img1.style.width = "84.6rem";
+                img1.style.height = "40.7rem";
+                displayimage.appendChild(img1);
+                break;
+                case 'i2':
+                var img2 = document.getElementById("i2");
+                img2.style.width = "84.6rem";
+                img2.style.height = "40.7rem";
+                displayimage.appendChild(img2);
+                break;
+                case 'i3':
+                var img3 = document.getElementById("i3");
+                img3.style.width = "84.6rem";
+                img3.style.height = "40.7rem";
+                displayimage.appendChild(img3);
+                break;
+                case 'i4':
+                var img4 = document.getElementById("i4");
+                img4.style.width = "84.6rem";
+                img4.style.height = "40.7rem";
+                displayimage.appendChild(img4);
+                break;
+                case 'i5':
+                var img5 = document.getElementById("i5");
+                img5.style.width = "84.6rem";
+                img5.style.height = "40.7rem";
+                displayimage.appendChild(img5);
+                break;
+                case 'i6':
+                var img6 = document.getElementById("i6");
+                img6.style.width = "84.6rem";
+                img6.style.height = "40.7rem";
+                displayimage.appendChild(img6);
+                break;
+                case 'i7':
+                var img7 = document.getElementById("i7");
+                img7.style.width = "84.6rem";
+                img7.style.height = "40.7rem";
+                displayimage.appendChild(img7);
+                break;
+                case 'i8':
+                var img8 = document.getElementById("i8");
+                img8.style.width = "84.6rem";
+                img8.style.height = "40.7rem";
+                displayimage.appendChild(img8);
+                break;
+            }
+        }
+
+        function reload(){
+            location.reload();
+        }
+        </script>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
